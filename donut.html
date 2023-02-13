@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donut Menu</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"  integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous"/>
+    
+    
+
+    <link href="style.css" rel="stylesheet">  
+    <link href="normalize.css" rel="stylesheet">
+    
+    
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Mansalva&family=Permanent+Marker&family=Roboto&family=Shadows+Into+Light&display=swap');
+
+      .fa-star {
+          color: rgb(242, 245, 97);
+          
+        }
+        .fa-star-half-alt{
+          color: rgb(242, 245, 97);
+        }
+        h1 {
+          font-family: 'Permanent Marker', cursive;
+          font-size: xx-large;
+        }
+        h5 {
+          font-family: Roboto, sans-serif;
+          font-size: x-large;
+         
+        }
+        h4 {
+          font-family: Roboto, sans-serif;
+          font-size: large;  
+        }
+       
+    </style>
+    
+</head>
+<body>
+
+  <main style="background: linear-gradient(rgb(244, 247, 116), rgb(231, 130, 130)); max-height: max-content;">
+  
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
+      <div class="container-fluid">
+        <a class="img-responsive" href="index.html"><img src="images/namelogo.png" alt="Coffee+Doughnut"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+                
+          <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+            <ul class="navbar-nav" >
+              <li class="nav-item">
+              <a class="nav-link" onclick="openNav()" role="button">How to order</a>
+              </li> 
+          
+          <!-- The overlay -->
+          <div id="myNav" class="overlay">
+  
+          <!-- Button to close the overlay navigation -->
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">Close</a>
+  
+          <!-- Overlay content -->
+          <div class="overlay-content">
+               <h3>Pre-Orders</h3>
+               <p>Feel free to choose a date from our dropdown menu for your desired pre-order date. Self-Pickup and Delivery options are available for pre-order.</p>
+               <h3>Delivery Orders</h3>
+               <p>Fulfilled directly online, our delivery partners are hailed on your behalf. Store opening hours and real-time stock levels apply</p>
+               <h3>Self-Pickup Orders</h3>
+               <p>Feel free to choose a date from our dropdown menu for your desired pre-order date. Self-Pickup and Delivery options are available for pre-order.</p>
+               <h3>Please Note:</h3>
+               <p>In the event an item is unavailable, it is either sold-out or the pre-order slots are full; we recommend trying another day or time for your order.</p>
+               <br>
+          </div>
+          </div> 
+          
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Menu</a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="coffee.html">Coffee</a></li>
+              <li><a class="dropdown-item" href="donut.html">Doughnut</a></li>
+              <li><a class="dropdown-item" href="others.html">Others</a></li>
+            </ul>
+                      
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">About</a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                  <li><a class="dropdown-item" href="index.html#about">About Us</a></li>
+                  <li><a class="dropdown-item" href="index.html#faq">Frequently Asked Questions</a></li>        
+                  <li><a class="dropdown-item" href="index.html#contact">Contact Us</a></li>
+                  <li><a class="dropdown-item" href="index.html#address">Store Location</a></li>            
+              </ul>
+              </li>
+                    
+        <li class="nav-item">
+        <button type="button" class="btn btn-outline-warning position-relative" data-bs-toggle="modal" data-bs-target="#cart"><i class="material-symbols-outlined">
+          local_mall
+          </i><span class="total-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">0<span class="visually-hidden">added to cart</span></span></button>
+        
+        </li>  
+        </li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+
+
+  <section></section>
+  <div class="container py-5">
+    <h1 class="text-center mb-5">All we need is love...and doughnuts!</h1>
+
+    <div class="row"> <!-- First Row -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+          <img src="images/donuts/1.jpg" class="w-100 rounded-top" alt="d1" id="d1"/>        
+            <div class="mask rounded-bottom" style="background-color: rgba(139, 121, 121, 0.562);">
+              <div class="card-body" style="padding-bottom: 5%; padding-right: 3%; padding-left: 3%;">
+                <h5 class="card-title"><strong>Donut 1</strong></h5>
+                          <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <h4>Php 80.00</h4>  
+                          </div>     
+                            <div class="addToCartItem" style="text-align: right;">
+                              <a href="#" class="add-to-cart btn btn-small btn-transparent btn-outline-warning btn-secondary" data-name ="Donut1" data-price="80.00"><i class="fas fa-cart-plus"></i> Add</a>
+                            </div>
+                        </div>
+        </div>
+        <div class="hover-overlay">
+              <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+        </div>
+        </div>
+    </div>
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+          <img src="images/donuts/2.jpg" class="w-100 rounded-top" alt="d2" id="d2"/>
+            <div class="mask rounded-bottom" style="background-color: rgba(139, 121, 121, 0.562);">
+              <div class="card-body" style="padding-bottom: 5%; padding-right: 3%; padding-left: 3%;">
+                <h5 class="card-title"><strong>Donut 2</strong></h5>
+                          <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <h4>Php 80.00</h4>  
+                          </div>
+                            <div class="addToCartItem" style="text-align: right;">
+                              <a href="#" class="add-to-cart btn btn-small btn-transparent btn-outline-warning btn-secondary" data-name ="Donut2" data-price="80.00"><i class="fas fa-cart-plus"></i> Add</a>
+                            </div>
+                        </div>
+        </div>
+        <div class="hover-overlay">
+              <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+        </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+        <img src="images/donuts/3.jpg" class="w-100 rounded-top" alt="d3" id="d3"/>
+          <div class="mask rounded-bottom" style="background-color: rgba(139, 121, 121, 0.562);">
+            <div class="card-body" style="padding-bottom: 5%; padding-right: 3%; padding-left: 3%;">
+              <h5 class="card-title"><strong>Donut 3</strong></h5>
+                        <div class="stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star-half-alt"></i>
+                          <h4>Php 80.00</h4>  
+                        </div>
+                          <div class="addToCartItem" style="text-align: right;">
+                            <a href="#" class="add-to-cart btn btn-small btn-transparent btn-outline-warning btn-secondary" data-name ="Donut3" data-price="80.00"><i class="fas fa-cart-plus"></i> Add</a>
+                          </div>
+                      </div>
+      </div>
+      <div class="hover-overlay">
+            <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+      </div>
+      </div>
+  </div>
+
+  <div class="col-12 col-md-6 col-lg-3">
+    <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+      <img src="images/donuts/4.jpg" class="w-100 rounded-top"alt="d4" id="d4"/>
+        <div class="mask rounded-bottom" style="background-color: rgba(139, 121, 121, 0.562);">
+          <div class="card-body" style="padding-bottom: 5%; padding-right: 3%; padding-left: 3%;">
+            <h5 class="card-title"><strong>Donut 4</strong></h5>
+                      <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <h4>Php 80.00</h4>  
+                      </div>
+                        <div class="addToCartItem" style="text-align: right;">
+                          <a href="#" class="add-to-cart btn btn-small btn-transparent btn-outline-warning btn-secondary" data-name ="Donut4" data-price="80.00"><i class="fas fa-cart-plus"></i> Add</a>
+                        </div>
+                    </div>
+    </div>
+    <div class="hover-overlay">
+          <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+    </div>
+    </div>
+</div>
+
+    <div class="container py-5"> <!-- Second Row -->
+      <div class="row">
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+              <img src="images/donuts/5.jpg" class="w-100 rounded-top"alt="d5" id="d5"/>
+                <div class="mask rounded-bottom" style="background-color: rgba(139, 121, 121, 0.562);">
+                  <div class="card-body" style="padding-bottom: 5%; padding-right: 3%; padding-left: 3%;">
+                    <h5 class="card-title"><strong>Donut 5</strong></h5>
+                              <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <h4>Php 45.00</h4>  
+                              </div>
+                                <div class="addToCartItem" style="text-align: right;">
+                                  <a href="#" class="add-to-cart btn btn-small btn-transparent btn-outline-warning btn-secondary" data-name ="Donut5" data-price="45.00"><i class="fas fa-cart-plus"></i> Add</a>
+                                </div>
+                            </div>
+            </div>
+            <div class="hover-overlay">
+                  <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+            </div>
+            </div>
+        </div>
+          
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+            <img src="images/donuts/6.jpg" class="w-100 rounded-top" alt="d6" id="d6"/>
+              <div class="mask rounded-bottom" style="background-color: rgba(139, 121, 121, 0.562);">
+                <div class="card-body" style="padding-bottom: 5%; padding-right: 3%; padding-left: 3%;">
+                  <h5 class="card-title"><strong>Donut 6</strong></h5>
+                            <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i>
+                              <h4>Php 45.00</h4>  
+                            </div>
+                              <div class="addToCartItem" style="text-align: right;">
+                                <a href="#" class="add-to-cart btn btn-small btn-transparent btn-outline-warning btn-secondary" data-name ="Donut6" data-price="45.00"><i class="fas fa-cart-plus"></i> Add</a>
+                              </div>
+                          </div>
+          </div>
+          <div class="hover-overlay">
+                <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+          </div>
+          </div>
+      </div>
+    
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+          <img src="images/donuts/7.jpg" class="w-100 rounded-top" alt="d7" id="d7"/>
+            <div class="mask rounded-bottom" style="background-color: rgba(139, 121, 121, 0.562);">
+              <div class="card-body" style="padding-bottom: 5%; padding-right: 3%; padding-left: 3%;">
+                <h5 class="card-title"><strong>Donut 7</strong></h5>
+                          <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <h4>Php 45.00</h4>  
+                          </div>
+                            <div class="addToCartItem" style="text-align: right;">
+                              <a href="#" class="add-to-cart btn btn-small btn-transparent btn-outline-warning btn-secondary" data-name ="Donut7" data-price="45.00"><i class="fas fa-cart-plus"></i> Add</a>
+                            </div>
+                        </div>
+        </div>
+        <div class="hover-overlay">
+              <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+        </div>
+        </div>
+    </div>
+    
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+        <img src="images/donuts/8.jpg" class="w-100 rounded-top" alt="d8" id="d8"/>
+          <div class="mask rounded-bottom" style="background-color: rgba(139, 121, 121, 0.562);">
+            <div class="card-body" style="padding-bottom: 5%; padding-right: 3%; padding-left: 3%;">
+              <h5 class="card-title"><strong>Donut 8</strong></h5>
+                        <div class="stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star-half-alt"></i>
+                          <h4>Php 45.00</h4>  
+                        </div>
+                          <div class="addToCartItem" style="text-align: right;">
+                            <a href="#" class="add-to-cart btn btn-small btn-transparent btn-outline-warning btn-secondary" data-name ="Donut8" data-price="45.00"><i class="fas fa-cart-plus"></i> Add</a>
+                          </div>
+                      </div>
+      </div>
+      <div class="hover-overlay">
+            <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+      </div>
+      </div>
+  </div>
+
+    <div class="container py-5"> <!-- Third Row -->
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+            <img src="images/donuts/9.jpg" class="w-100 rounded-top" alt="d9" id="d9"/>
+              <div class="mask rounded-bottom" style="background-color: rgba(139, 121, 121, 0.562);">
+                <div class="card-body" style="padding-bottom: 5%; padding-right: 3%; padding-left: 3%;">
+                  <h5 class="card-title"><strong>Donut 9</strong></h5>
+                            <div class="stars">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star-half-alt"></i>
+                              <h4>Php 45.00</h4>  
+                            </div>
+                              <div class="addToCartItem" style="text-align: right;">
+                                <a href="#" class="add-to-cart btn btn-small btn-transparent btn-outline-warning btn-secondary" data-name ="Donut9" data-price="45.00"><i class="fas fa-cart-plus"></i> Add</a>
+                              </div>
+                          </div>
+          </div>
+          <div class="hover-overlay">
+                <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+          </div>
+          </div>
+      </div>
+        
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+          <img src="images/donuts/10.jpg" class="w-100 rounded-top" alt="d10" id="d10"/>
+            <div class="mask rounded-bottom" style="background-color: rgba(139, 121, 121, 0.562);">
+              <div class="card-body" style="padding-bottom: 5%; padding-right: 3%; padding-left: 3%;">
+                <h5 class="card-title"><strong>Donut 10</strong></h5>
+                          <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <h4>Php 45.00</h4>  
+                          </div>
+                            <div class="addToCartItem" style="text-align: right;">
+                              <a href="#" class="add-to-cart btn btn-small btn-transparent btn-outline-warning btn-secondary" data-name ="Donut10" data-price="45.00"><i class="fas fa-cart-plus"></i> Add</a>
+                            </div>
+                        </div>
+        </div>
+        <div class="hover-overlay">
+              <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+        </div>
+        </div>
+    </div>
+        
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+        <img src="images/donuts/11.jpg" class="w-100 rounded-top"alt="d11" id="d11"/>
+          <div class="mask rounded-bottom" style="background-color: rgba(139, 121, 121, 0.562);">
+            <div class="card-body" style="padding-bottom: 5%; padding-right: 3%; padding-left: 3%;">
+              <h5 class="card-title"><strong>Donut 11</strong></h5>
+                        <div class="stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star-half-alt"></i>
+                          <h4>Php 85.00</h4>  
+                        </div>
+                          <div class="addToCartItem" style="text-align: right;">
+                            <a href="#" class="add-to-cart btn btn-small btn-transparent btn-outline-warning btn-secondary" data-name ="Donut11" data-price="85.00"><i class="fas fa-cart-plus"></i> Add</a>
+                          </div>
+                      </div>
+      </div>
+      <div class="hover-overlay">
+            <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+      </div>
+      </div>
+  </div>
+        
+  <div class="col-12 col-md-6 col-lg-3">
+    <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+      <img src="images/donuts/12.jpg" class="w-100 rounded-top" alt="d12" id="d12"/>
+        <div class="mask rounded-bottom" style="background-color: rgba(139, 121, 121, 0.562);">
+          <div class="card-body" style="padding-bottom: 5%; padding-right: 3%; padding-left: 3%;">
+            <h5 class="card-title"><strong>Donut 12</strong></h5>
+                      <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <h4>Php 85.00</h4>  
+                      </div>
+                        <div class="addToCartItem" style="text-align: right;">
+                          <a href="#" class="add-to-cart btn btn-small btn-transparent btn-outline-warning btn-secondary" data-name ="Donut12" data-price="85.00"><i class="fas fa-cart-plus"></i> Add</a>
+                        </div>
+                    </div>
+    </div>
+    <div class="hover-overlay">
+          <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+    </div>
+    </div>
+</div>
+
+  <div class="container py-5"> <!-- Forth Row -->
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+          <img src="images/donuts/13.jpg" class="w-100 rounded-top" alt="d13" id="d13"/>
+            <div class="mask rounded-bottom" style="background-color: rgba(139, 121, 121, 0.562);">
+              <div class="card-body" style="padding-bottom: 5%; padding-right: 3%; padding-left: 3%;">
+                <h5 class="card-title"><strong>Donut 13</strong></h5>
+                          <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <h4>Php 70.00</h4>  
+                          </div>
+                            <div class="addToCartItem" style="text-align: right;">
+                              <a href="#" class="add-to-cart btn btn-small btn-transparent btn-outline-warning btn-secondary" data-name ="Donut13" data-price="70.00"><i class="fas fa-cart-plus"></i> Add</a>
+                            </div>
+                        </div>
+        </div>
+        <div class="hover-overlay">
+              <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+        </div>
+        </div>
+    </div>
+            
+    <div class="col-12 col-md-6 col-lg-3">
+      <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+        <img src="images/donuts/14.jpg" class="w-100 rounded-top" alt="d14" id="d14"/>
+          <div class="mask rounded-bottom" style="background-color: rgba(139, 121, 121, 0.562);">
+            <div class="card-body" style="padding-bottom: 5%; padding-right: 3%; padding-left: 3%;">
+              <h5 class="card-title"><strong>Donut 14</strong></h5>
+                        <div class="stars">
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star"></i>
+                          <i class="fas fa-star-half-alt"></i>
+                          <h4>Php 70.00</h4>  
+                        </div>
+                          <div class="addToCartItem" style="text-align: right;">
+                            <a href="#" class="add-to-cart btn btn-small btn-transparent btn-outline-warning btn-secondary" data-name ="Donut14" data-price="70.00"><i class="fas fa-cart-plus"></i> Add</a>
+                          </div>
+                      </div>
+      </div>
+      <div class="hover-overlay">
+            <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+      </div>
+      </div>
+  </div>
+            
+  <div class="col-12 col-md-6 col-lg-3">
+    <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+      <img src="images/donuts/15.jpg" class="w-100 rounded-top" alt="d15" id="d15"/>
+        <div class="mask rounded-bottom" style="background-color: rgba(139, 121, 121, 0.562);">
+          <div class="card-body" style="padding-bottom: 5%; padding-right: 3%; padding-left: 3%;">
+            <h5 class="card-title"><strong>Donut 15</strong></h5>
+                      <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <h4>Php 45.00</h4>  
+                      </div>
+                        <div class="addToCartItem" style="text-align: right;">
+                          <a href="#" class="add-to-cart btn btn-small btn-transparent btn-outline-warning btn-secondary" data-name ="Donut15" data-price="45.00"><i class="fas fa-cart-plus"></i> Add</a>
+                        </div>
+                    </div>
+    </div>
+    <div class="hover-overlay">
+          <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+    </div>
+    </div>
+</div>
+            
+<div class="col-12 col-md-6 col-lg-3">
+  <div class="bg-image hover-zoom ripple shadow-1-strong rounded">
+    <img src="images/donuts/16.jpg" class="w-100 rounded-top" alt="d16" id="d16"/>
+      <div class="mask rounded-bottom" style="background-color: rgba(139, 121, 121, 0.562);">
+        <div class="card-body" style="padding-bottom: 5%; padding-right: 3%; padding-left: 3%;">
+          <h5 class="card-title"><strong>Donut 16</strong></h5>
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                      <h4>Php 45.00</h4>  
+                    </div>
+                      <div class="addToCartItem" style="text-align: right;">
+                        <a href="#" class="add-to-cart btn btn-small btn-transparent btn-outline-warning btn-secondary" data-name ="Donut16" data-price="45.00"><i class="fas fa-cart-plus"></i> Add</a>
+                      </div>
+                  </div>
+  </div>
+  <div class="hover-overlay">
+        <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+  </div>
+  </div>
+</div>
+</section>
+
+<!-- Modal -->
+
+<div class="modal fade" id="cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+      
+      <div class="modal-body">
+        <table class="show-cart table">
+          
+        </table>
+        <div><h5>Total price: Php<span class="total-cart"></span></h5></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="clear-cart btn btn-outline-warning position-relative">Clear Cart</button>
+        <a href="checkout.html" button type="button" class="btn btn-primary">Proceed to checkout</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+
+
+
+
+      
+
+
+      <script src="https://kit.fontawesome.com/3477ae541c.js" crossorigin="anonymous"></script>     
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>  
+      
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+
+      <script  src="./js/script.js"></script>
+      
+    </body>
+</html>

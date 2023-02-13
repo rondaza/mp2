@@ -1,0 +1,226 @@
+
+
+.img-responsive img{
+    height: 50px;
+    width: 150px;
+    padding: 0;
+}
+
+.left, .right{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+li a:hover:not(.active) {
+    background-color: #ffd346;
+    color: #000;
+  }
+
+.row .image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.25s ease all;
+}
+.coffee {
+    background: url('images/c.jpg');
+}
+
+.donut {
+    background: url('images/d.jpg');
+}
+.row .caption {
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    text-align: center;
+}
+
+
+.row .caption h1 {
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    margin-bottom:1em;
+}
+
+
+.row .caption .button {
+    background: #000;
+    color: #fff;
+    padding: 1em 2em;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.25s ease all;
+}
+
+
+.row .caption .button:hover {
+    background: #ffd447;
+    color: #000;
+}
+
+.row .side::before {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.507) 0%, rgba(0, 0, 0, 0.2721463585434174) 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    content: '';
+    display: block;
+}
+.row .left:hover .image,
+.row .right:hover .image {
+    transform: scale(1.3);
+    transition: .5s;
+}
+
+@media screen and (min-width:1200px) {
+
+    .row {
+          display: flex;
+    }
+
+
+    .row .left,
+    .row .right {
+          width: 100%;
+          height: 100vh;
+    }
+
+}
+
+.navbar-nav > li{
+    padding-left:15px;
+    padding-right:40px;
+  }
+
+.tab-content > .tab-pane.active {
+    visibility: visible;
+  }
+  .tab-content>.tab-pane {
+    display: block;
+    visibility: hidden;
+  }
+  .modal2-clasas {
+    visibility: visible;
+  }
+
+  .tab-content .tab-pane {
+    display: none;
+  }
+  
+  .tab-content  .active {
+    display: block;
+  }
+
+  .img-responsive{
+    padding-left: 20px;
+    position: relative;
+  }
+  .modal-dialog {
+    pointer-events: all;
+}
+
+  /* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.95); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.6s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 10%;
+  padding-left: 20px; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: centers; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+.overlay-content h3 {
+  text-align: start;
+}
+
+
+/* The navigation links inside the overlay */
+.overlay h3 {
+  padding-left: 8px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffd447;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay h3:hover, .overlay h3:focus {
+  color: #f1e3b4;
+  ;
+}
+.overlay p{
+  padding-left: 8px;
+  text-decoration: none;
+  color:#fff;
+  justify-items: left;
+  display: block;
+}
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  font-size: 15px;
+  color: #ffd447;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay h3 {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 15px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: grey;
+  color: white;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
